@@ -1,7 +1,8 @@
 ---
 title: "Warehouse Management Project: Ignisterra"
 date: 2015-11-20
-tages: [Optimization, MILP , Warehouse Management, Data Analysis]
+tags: [Optimization, MILP , Warehouse Management, Data Analysis]
+excerpt: "Warehouse Management, Optimization, Data Analysis"
 ---
 
 # Warehouse Layout Optimization - The Ignisterra Case
