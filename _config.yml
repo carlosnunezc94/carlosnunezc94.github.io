@@ -111,11 +111,11 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Personal Portfolio"
   location         : "Berkeley, CA"
-  email            :
+  email            :  carlos_nunez@berkeley.edu
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto: carlos_nunez@berkeley.edu"
+      url: mailto: carlos_nunez@berkeley.edu
     - label: "LinkedIn"
       icon: "fas fa-fw fa-link"
       url: "https://www.linkedin.com/in/carlosnunezcardenas/"
