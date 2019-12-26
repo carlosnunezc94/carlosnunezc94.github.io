@@ -115,7 +115,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto: carlos_nunez@berkeley.edu
+      url: "mailto: carlos_nunez@berkeley.edu"
     - label: "LinkedIn"
       icon: "fas fa-fw fa-linkedin-square"
       url: "https://www.linkedin.com/in/carlosnunezcardenas/"
