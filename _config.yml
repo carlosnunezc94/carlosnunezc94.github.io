@@ -117,7 +117,7 @@ author:
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:carlos_nunez@berkeley.edu
     - label: "LinkedIn"
-      icon: "fas fa-fw fa-link"
+      icon: "fas fa-fw fa-linkedin-square"
       url: "https://www.linkedin.com/in/carlosnunezcardenas/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
