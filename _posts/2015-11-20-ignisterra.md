@@ -1,11 +1,9 @@
 ---
-title: "Warehouse Management Project: Ignisterra"
+title: "Warehouse Management Project - Layout Optimization - Ignisterra"
 date: 2015-11-20
 tags: [Optimization, MILP , Warehouse Management, Data Analysis]
 excerpt: "Warehouse Management, Optimization, Data Analysis"
 ---
-
-# Warehouse Layout Optimization - The Ignisterra Case
 
 Wouldn't you feel that something is wrong if you left your higher quality products mixed with those you don't care about so much? How would you feel if, in addition to that, you are leaving them in a place that you know will be damaged in the blink of an eye, such as the open air, for example? Well, that's how the managers of [Ignisterra](https://www.ignisterra.com/en/), the world's largest lenga producer, felt when they realized that the most profitable inventory was being stored outdoors in a place prone to rain, such as southern Chile. Thus, together with students of Industrial Engineering from my university, we were asked to analyze the situation associated with inventory management in the distribution and manufacturing plant of Ignisterra.
 
