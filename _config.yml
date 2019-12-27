@@ -110,7 +110,7 @@ author:
   name             : "Carlos Núñez"
   avatar           : "/images/Carlos_Nunez.png"  # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Personal Portfolio"
-  location         : "Berkeley,CA"
+  location         : "Berkeley, CA"
   email            : 
   links:
     - label: "Email"
