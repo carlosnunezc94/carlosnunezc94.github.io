@@ -5,4 +5,3 @@ title: "Projects by Category"
 author_profile: true
 ---
 
-#Projects by Category
