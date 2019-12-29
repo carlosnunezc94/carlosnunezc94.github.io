@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 # Operations
-
+<p></p>
 ## [Operations Project: Layout Optimization of Ignisterra Warehouse](https://carlosnunezc94.github.io/ignisterra/)
-Date: 11-20-2015
-Keywords: Optimization, Warehouse Management, MILP, Data Analysis.
+ <span style="font-size:4em;">Date: 11-20-2015</span>
+ <span style="font-size:4em;">Keywords: Optimization, Warehouse Management, MILP, Data Analysis.</span>
