@@ -20,7 +20,7 @@ title                    : "Carlos Nunez"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Carlos Nunez"
-description              : #
+description              : "Projects Portfolio"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -109,7 +109,7 @@ analytics:
 author:
   name             : "Carlos Nunez"
   avatar           : "/images/Carlos_Nunez.png"  # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : #
+  bio              : "Projects Portfolio"
   location         : "Berkeley, CA"
   email            : 
   links:
