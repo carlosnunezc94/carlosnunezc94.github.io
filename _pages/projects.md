@@ -5,10 +5,14 @@ title: "Projects by Category"
 author_profile: true
 ---
 
-# Operations
-<p></p>
-## [Operations Project: Layout Optimization of Ignisterra Warehouse](https://carlosnunezc94.github.io/ignisterra/)
-
- <span style="font-size:1em;">Date: 11-20-2015</span>
- <p></p>
- <span style="font-size:1em;">Keywords: Optimization, Warehouse Management, MILP, Data Analysis.</span>
+<!--
+{% include base_path %}
+-->
+{% include group-by-array collection=site.posts field="tags" %}
+{% for tag in group_names %}
+  {% assign posts = group_items[forloop.index0] %}
+  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
+  {% for post in posts %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endfor %}
