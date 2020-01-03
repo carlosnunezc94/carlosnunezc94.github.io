@@ -58,4 +58,4 @@ The most relevant assumptions and restrictions of the problem presented are the 
 - Standard and economy woods can be outdoors (without a roof).
 - All pallets made of wood of the same quality will be considered equal, regardless of their thickness and width.
 - There are two storage areas: wood for internal consumption will be stored inside the sawmill, while wood for export will be stored in the exterior sheds. That said, the wood for export is as follows: First selection, select, select color and prime (70% of the total prime wood). On the other hand, the woods of internal consumption are the following: Standard, color and prime (30% of total prime).
-
+- Twenty-one areas have been defined for the location of wood in the sawmill, which have different sizes. However, each area can only be occupied by one type of wood.
