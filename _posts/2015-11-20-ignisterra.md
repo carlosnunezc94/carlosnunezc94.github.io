@@ -66,7 +66,7 @@ The formulation of the problem, after the relevant research, is as follows:
 
 #### Variables
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Variables.gif" alt="Variables"> 1 if lumber i takes position j within the sawmill, and 0 if lumber i is not assigned to location j.
+<img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Variables.gif" alt="Variables"> 1 if lumber i takes position j within the sawmill, and 0 if this is not the case.
 
 #### Objective Function:
 
