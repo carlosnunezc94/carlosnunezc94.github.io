@@ -1,13 +1,13 @@
 # main links
 main:
+  - title: "Projects by Category"
+    url: /categories/
   - title: "Projects by Tags"
     url: /tags/
   - title: "About"
     url: /about/
   - title: "Visa Status"
     url: /visa/
-  - title: "Projects by Category"
-    url: /categories/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
