@@ -91,7 +91,7 @@ The number of spaces dedicated to a type of wood must satisfy the amount of exis
 Only one type of wood can be assigned to each space.
 
 #### Parameters
-
+<p></p>
 <img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Turnover.gif" alt="Turnover"> Rotability of wood type i (Dimensionless).
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Distance.gif" alt="Distance"> Distance between storage site j and loading/unloading site. Manhattan distance (meters).
