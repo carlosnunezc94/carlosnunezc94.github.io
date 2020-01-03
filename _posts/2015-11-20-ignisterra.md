@@ -111,3 +111,8 @@ By solving the problem formulated above, we obtain the following distribution of
 
 The impact of our solution becomes evident when calculating the distance travelled by the forklifts considering the loading and unloading of wood in the year 2014. By making this comparison with the current layout versus the optimal one, we can appreciate that the distances traveled by the cranes are 5.5% less with the optimal distribution, which leads to substantial savings in fuel for the company, not to mention the increase in the company's load dispatch capacity.
 
+## Next Steps
+
+- Sensitity Analysis.
+- Implementation Plan.
+- Procedures to maintain the layout.
