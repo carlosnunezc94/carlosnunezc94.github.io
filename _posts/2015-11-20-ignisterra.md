@@ -1,5 +1,5 @@
 ---
-title: "Operations Project: Layout Optimization of Ignisterra Warehouse"
+title: "The Facility Layout Problem of Ignisterra Warehouse"
 date: 2015-11-20
 tags: [Optimization, MILP , Warehouse Management]
 category: "Operations"
@@ -48,3 +48,14 @@ As can be seen in the layout shown below, the spatial dimensions of the problem 
 ### Objectives and performance measures
 
 In order to maintain a layout that allows the fuel to be used by the storage machinery to be reduced, the different types of wood will be distributed in such a way as to **minimize the total distance traveled by these machines considering a fixed rotation level for each one of them**.
+
+### Assumptions and Constraints
+
+The most relevant assumptions and restrictions of the problem presented are the following:
+
+- Only a maximum of 4 cubic meters of wood can be placed per square meter.
+- The woods of first selection, prime, color and selected must be indoors.
+- Standard and economy woods can be outdoors (without a roof).
+- All pallets made of wood of the same quality will be considered equal, regardless of their thickness and width.
+- There are two storage areas: wood for internal consumption will be stored inside the sawmill, while wood for export will be stored in the exterior sheds. That said, the wood for export is as follows: First selection, select, select color and prime (70% of the total prime wood). On the other hand, the woods of internal consumption are the following: Standard, color and prime (30% of total prime).
+
