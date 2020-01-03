@@ -45,11 +45,11 @@ As can be seen in the layout shown below, the spatial dimensions of the problem 
 - Exterior of the factory with roofed space: 864 square meters.
 - Outside the factory without roofed space: 2698 square meters, of which 144 square meters will be considered within the scope of the problem.
 
-### Objectives and performance measures
+### Objectives & performance measures
 
 In order to maintain a layout that allows the fuel to be used by the storage machinery to be reduced, the different types of wood will be distributed in such a way as to **minimize the total distance traveled by these machines considering a fixed rotation level for each one of them**.
 
-### Assumptions and Constraints
+### Assumptions & Constraints
 
 The most relevant assumptions and restrictions of the problem presented are the following:
 
@@ -64,10 +64,27 @@ The most relevant assumptions and restrictions of the problem presented are the 
 
 The formulation of the problem, after the relevant research, is as follows:
 
-Objective Function:
+#### Objective Function:
 
 <p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Objective_Function.gif" alt="Objective Function">
 </p>
 
 We seek to minimize the total distance traveled by the loading machinery of the warehouse given a level of rotation of each wood.
+
+#### Constraints:
+
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Constraint_1.gif" alt="Constraint_1">
+</p>
+
+The number of spaces dedicated to a type of wood must satisfy the amount of existing stock of that type of wood.
+
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Constraint_2.gif" alt="Constraint_2">
+</p>
+
+Only one type of wood can be assigned to each space.
+
+## Results & Impact
+
