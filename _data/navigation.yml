@@ -6,8 +6,8 @@ main:
     url: /about/
   - title: "Visa Status"
     url: /visa/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
+  - title: "Projects by Category"
+    url: /categories/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
