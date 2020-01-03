@@ -103,3 +103,8 @@ Only one type of wood can be assigned to each space.
 
 ## Results & Impact
 
+By solving the problem formulated above, we obtain the following distribution of woods within the warehouse:
+
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Optimized_Solution.PNG" alt="Optimal">
+</p>
