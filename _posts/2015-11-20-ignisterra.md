@@ -1,8 +1,8 @@
 ---
 title: "Operations Project: Layout Optimization of Ignisterra Warehouse"
 date: 2015-11-20
-tags: [Optimization, MILP , Warehouse Management, Data Analysis]
-excerpt: "Warehouse Management, Optimization, Data Analysis"
+tags: [Optimization, MILP , Warehouse Management]
+excerpt: "Warehouse Management, Optimization, MILP"
 classes: wide
 header: 
     image: "/images/ignisterra/ignisterra.jpg"
