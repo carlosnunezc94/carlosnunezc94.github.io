@@ -22,7 +22,7 @@ en: &DEFAULT_EN
   meta_label                 :
   tags_label                 : "Tags:"
   categories_label           : "Categories:"
-  date_label                 : "Updated:"
+  date_label                 : "Date:"
   comments_label             : "Leave a comment"
   comments_title             : "Comments"
   more_label                 : "Learn more"
@@ -80,7 +80,7 @@ es: &DEFAULT_ES
   meta_label                 :
   tags_label                 : "Etiquetas:"
   categories_label           : "Categorías:"
-  date_label                 : "Actualizado:"
+  date_label                 : "Fecha:"
   comments_label             : "Deja un comentario"
   comments_title             : "Comentarios"
   more_label                 : "Ver más"
