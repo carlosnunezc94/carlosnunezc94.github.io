@@ -69,3 +69,5 @@ Objective Function:
 <p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Objective_Function.gif" alt="Objective Function">
 </p>
+
+We seek to minimize the total distance traveled by the loading machinery of the warehouse given a level of rotation of each wood.
