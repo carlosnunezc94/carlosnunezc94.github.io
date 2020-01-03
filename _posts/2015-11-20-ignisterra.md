@@ -64,6 +64,10 @@ The most relevant assumptions and restrictions of the problem presented are the 
 
 The formulation of the problem, after the relevant research, is as follows:
 
+#### Variables
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Variables.gif" alt="Variables"> 1 if lumber i takes position j within the sawmill, and 0 if lumber i is not assigned to location j.
+
 #### Objective Function:
 
 <p align="center">
@@ -85,6 +89,10 @@ The number of spaces dedicated to a type of wood must satisfy the amount of exis
 </p>
 
 Only one type of wood can be assigned to each space.
+
+#### Parameters
+
+
 
 ## Results & Impact
 
