@@ -92,7 +92,10 @@ Only one type of wood can be assigned to each space.
 
 #### Parameters
 
-
+<img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Turnover.gif" alt="Turnover"> Rotability of wood type i (Dimensionless).
+<img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Distance.gif" alt="Distance"> Distance between storage site j and loading/unloading site. Manhattan distance (meters).
+<img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Space.gif" alt="Space"> Authorized storage space in box/location j (cubic meters).
+<img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Stock.gif" alt="Stock"> Space needed to store all type i wood (cubic meters).
 
 ## Results & Impact
 
