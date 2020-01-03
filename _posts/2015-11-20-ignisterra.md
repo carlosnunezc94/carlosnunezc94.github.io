@@ -113,6 +113,6 @@ The impact of our solution becomes evident when calculating the distance travell
 
 ## Next Steps
 
-- Sensitity Analysis.
+- Sensitibity Analysis.
 - Implementation Plan.
 - Procedures to maintain the layout.
