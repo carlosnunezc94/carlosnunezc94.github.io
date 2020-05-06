@@ -1,49 +1,52 @@
 ---
-title: "The Facility Layout Problem of Ignisterra Warehouse"
-date: 2015-11-20
-tags: [Optimization, MILP , Warehouse Management]
-category: "Operations"
-excerpt: "Warehouse Management, Optimization, MILP"
+title: "Crypto Currencies and Social Engagement: Real Time Correlations"
+date: 2020-05-05
+tags: [Data Science, Business Intelligence, Visualization]
+category: "Data Science"
+excerpt: "Data Science, Data Engineering, SQL, AWS DBS, AWS EC2, Automation"
 classes: wide
 header: 
-    image: "/images/ignisterra/ignisterra.jpg"
+    image: "/images/crypto/crypto.jpg"
 ---
 
-Wouldn't you feel that something is wrong if you left your higher quality products mixed with those you don't care about so much? How would you feel if, in addition to that, you are leaving them in a place that you know will be damaged in the blink of an eye, such as the open air, for example? Well, that's how the managers of [Ignisterra](https://www.ignisterra.com/en/), the world's largest lenga producer, felt when they realized that the most profitable inventory was being stored outdoors in a place prone to rain, such as southern Chile. Thus, together with students of Industrial Engineering from my university, we were asked to analyze the situation associated with inventory management in the distribution and manufacturing plant of Ignisterra.
+Have you ever invested in an asset which you are 100% sure will give you a great return? I did a couple of times, and believe me, this kind of investment never worked out. For reasons like these I never invested in crypto currencies: It was a market that I practically did not understand and that, while it had great potential, was absurdly volatile. However, as a good engineer, I wanted to see if, using variables that I do understand, such as social engagement of different websites, it was possible to understand the behavior of these assets, and who knows, finally get the return I so often expected. The question was, how can I use the data accessible on the Internet and make them give me the necessary understanding to invest in these virtual currencies?
 
 ## The Problem
 
-At the beginning, the situation was quite ambiguous: We had to completely analyze the process of receiving, storing and dispatching cargo in order to understand exactly what was happening in that warehouse. However, by working closely with the operations manager, the warehouse manager and the plant workers, we were able to understand how these processes were handled and how this company continued to operate normally in the face of this alleged inventory problem for which we were asked for advice.
+Cryptocurrencies’ price has so far been highly volatile and unpredictable, leading to either large profits or large losses. Trading volume has often been correlated to price movements, but this superficial correlation can easily be biased by big players moving large quantities of money back and forth from their accounts. This trading volume is often referred to as “fake volume” and it is easy to understand how it is not significant in assessing cryptocurrencies’ value. Are there other signals that can be used to predict what the price of a particular cryptocurrency will be in the future? 
 
-Within our situation analysis process, the first question we asked ourselves was why does this company keep all its raw material, independent of quality? Clearly Ignisterra was storing material with little profitability and neglecting valuable material. At that time, it was explained to us that there were [several types of wood](https://www.ignisterra.com/wp-content/uploads/2019/07/Brochure_LENGA_LUMBER.pdf), based on their quality, cutting thickness, density, etc., and we were also explained that one of its main business policies is **the use of all wood extracted from Tierra del Fuego, regardless of type or quality**. This made us understand that the wood superhabit could be mainly of low quality wood, but we had to do a deeper analysis to validate that assumption.
+## Solution
 
-Due to the suspicions we had, we requested the necessary information to be able to graph the stock of inventory stored during the last 4 and a half years:
+Gathering data related to different cryptocurrencies from different online sources, which could be used to study price correlations and build investment strategies.
 
-![Stackplot Time Series: Stock of inventory per type of Wood per Year]({{ site.url }}{{ site.baseurl}}/images/ignisterra/StackPlot.png)
+## Value proposition
 
-Indeed, it can be seen that the company's inventory levels have continuously increased over the last 5 years, reaching a total inventory of **5796.12 cubic meters**. Of the total, **Standard** class wood is the wood with the largest presence in Ignisterra's warehouse, contributing **75.7%** of the final inventory. In second place is the **Economic** type of wood, with **10.9%**. This is a clear indication that regular or poor quality woods have had a higher arrival rate than their departure rate in recent years.
+Data is currently largely dispersed around the web, and valuable information has to be accessed from several different sources, cleaned, and organized before someone can analyze it. At present, some startups offer similar solutions, and require you to pay to access them. These datasets usually contain information about historical price and volume, but don’t take into consideration fake volume, social media interest, or search engine queries. While it’s very hard to accurately assess the size of fake volume, social engagement cover time might signal the existence of some red flags. 
 
-If we add to the increase in inventory the fact that it is disorganized, with mixed woods independent of their visual quality, and considering that each order considers different types of wood, thicknesses and lengths, the problem intensifies exponentially. This has triggered increases in delivery times, mainly due to the lack of knowledge of the location of the requested woods.
+## Design and Architecture
 
-Although this generalized inventory disorder has had an impact on the operation, it does not impede the operation of the company in terms of remanufacturing the material. The following diagram summarizes the information gathered in our analysis:
+# Data Sources
 
-![Ishikawa Diagram]({{ site.url }}{{ site.baseurl }}/images/ignisterra/Fishbone_diagram.PNG)
+As previously mentioned, there is a lot of publicly available information online related to the cryptocurrency space. We decided to concentrate on the three main coins in terms of traded volume, namely Bitcoin, Ethereum, and XRP. We collected daily data from the following sources:
+- Reddit, using the PRAW API, and performing web scraping on redditmetrics.com (each crypto has its own subreddit, from which we get: number of posts per day, new subscribers, number of comments).
+- Wikipedia page views, using the mwviews API.
+- Cryptocompare API (historical aggregated prices across different exchanges).
+- Coin Metrics (economic data).
 
-## Problem Formulation
+Not all this data is available from the same starting date. As a common starting point, we picked January 1st, 2017, which will allow us to collect information before the explosion of the cryptocurrency bubble at the beginning of 2018. 
 
-Due to Ignisterra's corporate culture, focusing our efforts on reducing inventory was a bad idea, as the company was already working on some proposals associated with the addition of new products to its portfolio, such as the production of biomass and the sale of firewood. That is why we focused on the second major cause of inventory disorder, which was the poor distribution of the area of the woods and consequently mixing them between areas.
+We also obtained data from Google Trends and Twitter but eventually decided not to incorporate them. For Google Trends, we run into a dependency problem when automating the web scraping, while for Twitter data every day we would have exceeded the daily rate limit.
 
-### Spatial Dimensions
+# Database Creation and Structure
 
-As can be seen in the layout shown below, the spatial dimensions of the problem are as follows:
+Considering the different data sources mentioned above, the first decision was where we would store all this data. Considering the different options available at local and cloud level, we decided to create a database instance in AWS DBS, mainly because of the power of integration with other AWS services, such as automation and execution of scripts in the cloud, and the convenient free offer from Amazon, among others.
+The second step was to connect this instance to MySQL Workbench, a visual tool that allows easy database manipulation, and with which Carlos had already worked in past projects. However, the tool was only useful for the creation of the schema/tables to be used, since all the data loading and row modification was developed in python using the pymysql module.
+
+That said, the table used for this project is the following:
 
 <p align="center">
-<img src="{{ site.url }}{{ site.baseurl }}/images/ignisterra/Layout_Company.PNG" alt="Company_Layout">
+<img src="{{ site.url }}{{ site.baseurl }}/images/crypto/database.JPG" alt="Daily Table">
 </p>
-
-- Factory interior: 625.5 square meters.
-- Exterior of the factory with roofed space: 864 square meters.
-- Outside the factory without roofed space: 2698 square meters, of which 144 square meters will be considered within the scope of the problem.
 
 ### Objectives & performance measures
 
