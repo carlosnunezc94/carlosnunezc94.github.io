@@ -21,3 +21,20 @@ Having said that, I wanted to apply these concepts in the grocery delivery indus
 - Which products are the most requested? Which department and aisle are they from?
 - Which product A is more likely to be in the same order if it is product B?
 - Which aisles should go together in a supermarket?
+
+
+## The Dataset
+
+The dataset to be utilized is “The Instacart Online Grocery Shopping Dataset 2017”. The dataset is anonymized and contains a sample of over 3 million grocery orders from more than 200,000 Instacart users. For each user, Instacart provide between 4 and 100 of their orders, with the sequence of products purchased in each order. However, I extracted a subset of the groceries ordered equivalent to the products from the Deli, International and Alcohol department for computing purposes. The dataset consist of the following files:
+
+1. order_products__prior.csv: File with the relationship order-product with:
+- order_id: Unique identifier of the order.
+- product_id: Unique identifier of the product.
+- add_to_cart_order: Position in which the product was added to the cart (Ex: 1-First, 4-Fourth, etc.)
+- reordered: Boolean value. It's True if the product was reordered considering the previous order.
+
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/market_basket/order_data.JPG" alt="Daily Table">
+</p>
+
+2. 
