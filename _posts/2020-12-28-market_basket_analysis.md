@@ -6,7 +6,7 @@ category: "Data Science"
 excerpt: "Data Science, Market Basket Analysis, Pandas, Matplotlib, Seaborn, Customer Behavior"
 classes: wide
 header: 
-    image: "/images/market_basket/shopping.png"
+    image: "/images/market_basket/shopping.jpg"
 ---
 
 ## Motivation
