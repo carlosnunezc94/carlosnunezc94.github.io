@@ -1,5 +1,5 @@
 ---
-title: "Analysing Instacart transactions using Association Rules"
+title: "Analysing Instacart transactions using Association Rules and Graphs"
 date: 2020-12-28
 tags: [Data Science, Pandas, Matplotlib]
 category: "Data Science"
