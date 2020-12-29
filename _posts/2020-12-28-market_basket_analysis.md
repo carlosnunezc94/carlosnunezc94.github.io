@@ -27,7 +27,7 @@ Having said that, I wanted to apply these concepts in the grocery delivery indus
 
 The dataset to be utilized is “The Instacart Online Grocery Shopping Dataset 2017”. The dataset is anonymized and contains a sample of over 3 million grocery orders from more than 200,000 Instacart users. For each user, Instacart provide between 4 and 100 of their orders, with the sequence of products purchased in each order. However, I extracted a subset of the groceries ordered equivalent to the products from the Deli, International and Alcohol department for computing purposes. The dataset consist of the following files:
 
-1. order_products__prior.csv: File with the relationship order-product with:
+1) order_products__prior.csv: File with the relationship order-product with:
 - order_id: Unique identifier of the order.
 - product_id: Unique identifier of the product.
 - add_to_cart_order: Position in which the product was added to the cart (Ex: 1-First, 4-Fourth, etc.)
@@ -37,15 +37,15 @@ The dataset to be utilized is “The Instacart Online Grocery Shopping Dataset 2
 <img src="{{ site.url }}{{ site.baseurl }}/images/market_basket/order_data.JPG" alt="Daily Table">
 </p>
 
-2. products.csv: File with product identifiers and relationship product-aisle-department. Each row contains product identifier, product name, aisle identifier and department identifier.
+2) products.csv: File with product identifiers and relationship product-aisle-department. Each row contains product identifier, product name, aisle identifier and department identifier.
 
 <p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/market_basket/product_data.JPG" alt="Daily Table">
 </p>
 
-3. aisles.csv: File containing the aisle identifiers and names. I won't add a screenshot since I don't think it is needed (You get the point).
+3) aisles.csv: File containing the aisle identifiers and names. I won't add a screenshot since I don't think it is needed (You get the point).
 
-4. departments.csv: File containing the aisle identifiers and names. 
+4) departments.csv: File containing the aisle identifiers and names. 
 
 ## Analyzing orders
 
