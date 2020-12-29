@@ -37,4 +37,12 @@ The dataset to be utilized is “The Instacart Online Grocery Shopping Dataset 2
 <img src="{{ site.url }}{{ site.baseurl }}/images/market_basket/order_data.JPG" alt="Daily Table">
 </p>
 
-2. 
+2. products.csv: File with product identifiers and relationship product-aisle-department. Each row contains product identifier, product name, aisle identifier and department identifier.
+
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/market_basket/product_data.JPG" alt="Daily Table">
+</p>
+
+3. aisles.csv: File containing the aisle identifiers and names. I won't add a screenshot since I don't think it is needed (You get the point).
+
+4. departments.csv: File containing the aisle identifiers and names. 
