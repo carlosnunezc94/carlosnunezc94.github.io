@@ -46,3 +46,13 @@ The dataset to be utilized is “The Instacart Online Grocery Shopping Dataset 2
 3. aisles.csv: File containing the aisle identifiers and names. I won't add a screenshot since I don't think it is needed (You get the point).
 
 4. departments.csv: File containing the aisle identifiers and names. 
+
+## Analyzing orders
+
+Let's start understanding our structured data. 
+- The data has 977869 different orders with 3515 different products from the departments mentioned above. In total, there are 1474198 products sold.
+- More than 71% of the products comes from the Deli department, whereas just 11% comes from the alcohol section. This makes sense from the point of view that food is more sold than drinks in general. This tendency can be seen in the whole dataset as well.
+
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/market_basket/graph_1.JPG" alt="Daily Table">
+</p>
