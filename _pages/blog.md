@@ -1,6 +1,7 @@
 ---
-title: Blog Posts
+layout: category
 permalink: /blog/
-collection: portfolio
-entries_layout: grid
+title: Blog
+author_profile: true
+taxonomy: blog
 ---
