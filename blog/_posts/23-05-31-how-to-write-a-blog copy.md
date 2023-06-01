@@ -1,6 +1,7 @@
 ---
-permalink: /about/
-wide: true
+title:  "Cars: The Movie Database"
+header:
+  teaser: /assets/images/cars.jpg
 ---
 
 # About Me
@@ -28,6 +29,3 @@ I am always looking for new ways to challenge myself and grow as a Data Scientis
 # Contact Me
 ---
 If you would like to learn more about me or my work, please feel free to contact me at ***carlos.nunez.dev@gmail.com***
-
-
-
