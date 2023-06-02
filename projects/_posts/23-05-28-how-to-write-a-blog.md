@@ -1,8 +1,8 @@
 ---
-title:  "Cars: The Movie Database"
-category: blog
+title:  "Why Mike Cuberta is single"
+classes: wideS
 header:
-  teaser: /assets/images/cars.jpg
+  teaser: /assets/images/tree.jpg
 ---
 
 # About Me

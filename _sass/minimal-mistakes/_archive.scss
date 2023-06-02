@@ -150,7 +150,7 @@ Grid view
 }
 
 .grid__item {
-margin-bottom: 2em;
+margin-bottom: 0.5em;
 
 @include breakpoint($small) {
  float: left;

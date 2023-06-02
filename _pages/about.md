@@ -1,6 +1,6 @@
 ---
 permalink: /about/
-wide: true
+classes: wide
 ---
 
 # About Me
