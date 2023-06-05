@@ -61,3 +61,23 @@ df.head()
 <p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/ads_overspending/dataframe.png" alt="Daily Table">
 </p>
+
+## Exploratory Analysis
+First, we are gonna review the categorical variables of our dataset, followed for the continuous, quantitave variables.
+
+### Looking at categorical variables 
+---
+
+```
+fig = plt.figure(figsize=(15,5))
+vars_cat = ['treatment','company_size']
+for i, var in enumerate(vars_cat):
+    ax = plt.subplot(1,2,i+1)
+    sns.countplot(df[var])
+    plt.title("Count plot of " + var)  
+```
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/ads_overspending/categorical_barplot.png" alt="Daily Table">
+</p>
+
+The treatment variable is evenly distributed across our dataset, however, **the company size is not evenly distributed across our 3 categories**. More than half of the campaigns are from small companies, whereas medium companies have the least number of campaigns. The variation across the company_size variable is important since, so far, our conclusions regarding the data will be influenced mostly from small companies, and because we don't know how well distributed is the treatment variable between different company sizes.
