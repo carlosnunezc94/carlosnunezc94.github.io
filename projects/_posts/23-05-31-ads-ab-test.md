@@ -59,7 +59,7 @@ df.head()
 
 
 <p align="center">
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/ads_overspending/dataframe.png" alt="Dataframe">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/ads_overspending/dataframe.PNG" alt="Dataframe">
 </p>
 
 ## Exploratory Analysis
@@ -143,7 +143,7 @@ for i in ['campaign_spend','campaign_budget']:
 
 
 <p align="center">
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/ads_overspending/stats_table.png" alt="Daily Table">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/ads_overspending/stats_table.PNG" alt="Daily Table">
 </p>
 
 The mean is about 100 times bigger than the median for both spending and budget. This is not surprising when we compare the different percentiles with the maximum spending and budget made for a single campaign. It is important to keep in mind the level of skewness when defining the kind of test we are gonna implement and what exactly we want to compare between variants (Mean vs Median)
