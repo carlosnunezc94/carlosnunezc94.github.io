@@ -7,6 +7,7 @@ header:
   overlay_filter: 0.7 # same as adding an opacity of 0.5 to a black background
 
 excerpt: "Optimizing Raw Material Placement and Cargo Transportation: Formulation and Solution for Ignisterra's Warehouse Operations"
+published: false
 ---
 
 The managers at [Ignisterra](https://ignisterra.com/), the globally renowned producer of lenga and the world's largest in its industry, were disconcerted to discover that their highest-quality inventory was being stored in an unfavorable manner. This predicament arose from the fact that valuable products were being mixed with those of lesser importance and left exposed to potential damage. Due to an unexpected increase in inventory, part of its high-end raw materials were stored outdoors, left exposed to potential damage in a region where rainfall is common. Due to the urgency of the matter, I was called to conduct a comprehensive analysis of the inventory management practices and to propose improvements in the storage of materials within the facility.
