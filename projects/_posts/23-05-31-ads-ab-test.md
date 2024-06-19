@@ -40,18 +40,17 @@ The post is divided into 5 stages: The data itself, the exploratory analysis, th
 ## The data 
 
 The data is composed of 15,474 advertisers with the following information:
-- treatment: The variant the advertiser was assigned to (Control or Treatment)
-- company_size: Categorical variable representing the size of the company, not the spending of the company (Small, medium, and large). This is
-included because businesses of different sizes use AdsSupreme ads platform in very different ways and may react differently to the new product.
-- campaign_spend: Campaign spend during the experiment
+- treatment: the variant to which the advertiser was assigned (Control or Treatment)
+- company_size: Categorical variable representing company size, not company expenditure (Small, Medium and Large). It is
+included because companies of different sizes use the AdsSupreme ad platform in very different ways and may react differently to the new product.
+- campaign_spend: Campaign expenditure during the experiment
 - campaign_budget: Campaign budget during the experiment
 
-As you can see in the following code snippets, luckily our data doesn't have null values so we can skip any decisions regarding missing values and proceed to explore the data.
+As you can see in the following code snippets, fortunately our data has no null values, so we can skip any decisions regarding missing values and proceed to explore the data.
 ```
 df.head()
 ```
-
-
+ 
 <p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/ads_overspending/dataframe.PNG" alt="Dataframe">
 </p>
@@ -64,13 +63,11 @@ df_describe.loc['% null values'] = df.isnull().sum()
 df_describe
 ```
 
-
 <p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/ads_overspending/dataframe_describe.PNG" alt="Dataframe Describe">
 </p>
 
 ## Exploratory Analysis
-First, we are gonna review the categorical variables of our dataset, followed for the continuous, quantitave variables
 
 ### Categorical variables - Size of our clients
 ---
@@ -87,7 +84,26 @@ for i, var in enumerate(vars_cat):
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/ads_overspending/categorical_barplot.png" alt="Barplots">
 </p>
 
-The **treatment** variable is evenly distributed across our dataset, however, **the company size is not evenly distributed across our 3 categories**. More than half of the campaigns are from small companies, whereas medium companies have the least number of campaigns. The variation across the **company_size** variable is important since, so far, our conclusions regarding the data will be influenced mostly from small companies, and because we don't know how well distributed is the **treatment** variable between different company sizes
+The **treatment** variable is evenly distributed in our data set, however, **company_size is not evenly distributed in our 3 categories**. More than half of the campaigns come from small companies, while medium-sized companies have the fewest campaigns. The variation in the **company_size** variable is important because, so far, our conclusions about the data will be influenced primarily by small firms, and because we do not know how well distributed the **treatment** variable is across firm sizes,
+
+```
+plt.figure(figsize=(24,8))
+company_size = df['company_size'].unique()
+for i, var in enumerate(company_size):
+    plt.subplot(1,3,i+1)
+    sns.countplot(df[df['company_size'] == var]['treatment'])
+    plt.xlabel(var, fontsize=16)
+    plt.title("Count plot of treatment for " + var + ' companies')
+```
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/ads_overspending/categorical_barplot_company_size.png" alt="Barplots">
+</p>
+
+Looking at the distribution of treatment and control across different companiy sizes, we can see that customers were fairly well distributed across our old and new products.
+
+
+
+
 
 
 ### Continuous variables - Distribution of spending and budget
