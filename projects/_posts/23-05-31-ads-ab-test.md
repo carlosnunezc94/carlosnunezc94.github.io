@@ -10,28 +10,22 @@ excerpt: "Performing exploratory analysis, feature engineering and statistical t
 ---
  
 
-In this blog post, I will share with you my approach for a take-home assignment I got from a company for a Data Science position in the ads data science team, which I did in January of 2021 approximately. During the article, you can expect my approach for exploratory analysis, feature engineering, data visualization, and A/B testing, providing code when I consider it appropriate. 
+In the following post, I will share with you my thought process and the solution I presented for a take-home assignment I received from a large technology company whose main source of revenue is ads. This take-home was part of a Senior Data Scientist selection process for the Ads Data Science team, which I did in 2021. During this article you can see all the steps I went through, including exploratory analysis, feature engineering, data visualization, and AB testing, which received good feedback and allowed me to move on to an interview with the hiring manager.
 
-The audience of the solution is product managers with knowledge of data science and experimentation practices, so I'm not gonna go in-depth on the definitions of the different methods unless I find them worth describing (Particularly when we talk about statistical tests, both parametric and non-parametric).
+The post is aimed at people who are transitioning to Data Science or who want to know more about different experimentation and hypothesis testing methodologies (Statistical tests, both parametric and nonparametric)
 <br>
 <br>
 
 # Increasing overspending and lower budgets
 ---
-We are on the shoes of a Data Scientist at AdsSupreme, a company with a platform where businesses can create advertising campaigns to increase awareness of their brands or to increase adoption of their products or services. Let's imagine we have a single ad product where advertisers pay us each time a user clicks on their ad.
+We are in the shoes of a Data Scientist at AdsSupreme, a company with a platform where companies can create advertising campaigns to increase brand awareness or increase adoption of their products or services. Let's imagine we have a unique advertising product where advertisers pay us every time a user clicks on their ad.
 
-Each campaign has a budget, and advertiser never has to pay more than it, so if we were to spend
-more than the campaign’s budget, we would not be able to bill the advertiser for the additional
-spend. This is called **overspending**. In practice, it's difficult to avoid overspending because generally there are delays between when the platform sends ads to users and when they click on the ads.
+Each campaign has a budget, and the advertiser never has to pay more than it does, so if we were to spend
+campaign budget, we would not be able to bill the advertiser for the additional expense. This is called **overspending**. In practice, it is difficult to avoid overspending because there are usually delays between when the platform sends ads to users and when they click on them.
 
-In the last months, our team have been noticing an **increase in overspending** on the platform. In an
-attempt to reduce the amount of overspend, the product team decided to create a new product where
-advertisers pay each time their ad appears in a user’s viewport rather than each time it is clicked
-on.
+In recent months, our team has observed an **increase in overspending** on the platform. In an attempt to reduce the overspending, the product team decided to create a new product where advertisers pay every time their ad appears in the user's window, rather than each time it is clicked.
 
-Let's assume that our team designed an AB test, splitting advertisings into control and treatment variants, and after a week, we have some data available for analysis.
-
-The product team wants to know if the new product was effective at reducing overspending, and how effective depending on the company size. Apart from that, the product team is certain advertisers in the treatment group are entering lower budgets because they are wary of the new product. Is there any evidence supporting those suspicions?
+Our DS team designed an AB test, splitting the ads into control and treatment variants, and after a week we have some data for analysis. The product team wants to know if the new product has been effective in reducing overspending, and how effective it has been in terms of company size. Beyond that, the product team is certain that advertisers in the treatment group are introducing lower budgets because they are wary of the new product. Is there any evidence to support these suspicions?
 
 
 <br>
@@ -40,7 +34,7 @@ The product team wants to know if the new product was effective at reducing over
 # From EDA to AB Testing
 ---
 
-The project is divided into 5 stages: The data itself, the exploratory analysis, the definition overspending and creation of the feature, the A/B test analysis for over-spending, and finally the experiment regarding the treatment group's budgeting. Finally, I will briefly mention what other analysis can be performed on the dataset
+The post is divided into 5 stages: The data itself, the exploratory analysis, the overspending definition and feature creation, the A/B test analysis for overspending, and finally the experiment regarding treatment group budgeting. Finally, I will briefly mention what other analyses can be performed on the data set.
 
 
 ## The data 
@@ -52,7 +46,7 @@ included because businesses of different sizes use AdsSupreme ads platform in ve
 - campaign_spend: Campaign spend during the experiment
 - campaign_budget: Campaign budget during the experiment
 
-As you can see in the folowing code snippets, luckily our data doesn't have null values so we can skip any decisions regarding missing values and proceed to explore the data
+As you can see in the following code snippets, luckily our data doesn't have null values so we can skip any decisions regarding missing values and proceed to explore the data.
 ```
 df.head()
 ```
@@ -60,6 +54,19 @@ df.head()
 
 <p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/ads_overspending/dataframe.PNG" alt="Dataframe">
+</p>
+
+```
+df_describe = df.describe()
+df_describe.loc['dtype'] = df.dtypes
+df_describe.loc['size'] = len(df)
+df_describe.loc['% null values'] = df.isnull().sum()
+df_describe
+```
+
+
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/ads_overspending/dataframe_describe.PNG" alt="Dataframe Describe">
 </p>
 
 ## Exploratory Analysis
