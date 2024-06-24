@@ -7,7 +7,7 @@ header:
   overlay_filter: 0.7 # same as adding an opacity of 0.5 to a black background
 
 excerpt: "How to use custom transforming using classes in a way that our transformations are pandas friendly and we don't lose tract of key information about our dataset"
-#published: false
+published: false
 ---
 
 # Introduction
